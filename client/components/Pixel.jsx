@@ -1,14 +1,18 @@
 import React from 'react'
-import { generateKeyPair } from 'crypto';
 
 class Pixel extends React.Component {
+  constructor () {
+    super()
+    this.state = {
+      style: { backgroundColor: 'cornflowerblue',
+        height: '100px',
+        width: '300px' }
+    }
+  }
+
   render () {
     return (
-      <div id = 'pixel' style={{
-        backgroundColor: 'cornflowerblue',
-        height: '100px',
-        width: '300px'
-      }}></div>
+      <div id = 'pixel' style = {this.state.style}></div>
     )
   }
 }

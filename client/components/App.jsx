@@ -4,8 +4,14 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <div id="app">
+    <div>
       <Pixel/>
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
     </div>
   )
 }
