@@ -2,7 +2,11 @@ import React from 'react'
 
 const Pixel = () => {
   return (
-    <div></div>
+    <div style={{
+      height: 10,
+      width: 10,
+      backgroundColor: 'blue',  
+    }}></div>
   )
 }
 
