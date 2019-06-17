@@ -3,10 +3,7 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <>
-      <Pixel />
-      <div>React development has begun!</div>
-    </>
+    <Pixel />
   )
 }
 
