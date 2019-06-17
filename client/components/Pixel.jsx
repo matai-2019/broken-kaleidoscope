@@ -4,11 +4,14 @@ class Pixel extends React.Component {
   constructor () {
     super()
     this.state = {
-      style: { backgroundColor: 'cornflowerblue',
-        height: '100px',
-        width: '300px' }
+      style: { backgroundColor: this.randomHexColor(),
+        height: '120px',
+        width: '120px' }
     }
   }
+
+  randomHexColor = () =>
+    `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
   render () {
     return (
