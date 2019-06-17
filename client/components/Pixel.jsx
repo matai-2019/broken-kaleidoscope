@@ -32,14 +32,20 @@ class Pixel extends React.Component {
     })
   }
 
+  componentDidMount () {
+    const intervalId = setInterval(() => this.clickHandler(), 5000); this.setState({ intervalId })
+  }
+
+  componentWillUnmount () {
+    clearInterval(this.state.intervalId)
+  }
+
   randomHexColor = () =>
     `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
   render () {
     return (
-      <div onClick={this.clickHandler} onMouseEnter={this.mouseEnterHandler} style={this.state.style}>
-
-      </div>
+      <div onClick={this.clickHandler} onMouseEnter={this.mouseEnterHandler} onMouseLeave={this.clickHandler} style={this.state.style} ></div>
     )
   }
 }
