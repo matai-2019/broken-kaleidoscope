@@ -1,10 +1,22 @@
 import React from 'react'
 import Pixel from './Pixel'
 
-const App = () => {
-  return (
-    <Pixel />
-  )
+class App extends React.Component {
+  PixelArray (n) {
+    let arr = []
+    for (let i = 0; i < n; i++) {
+      arr.push(<Pixel />)
+    }
+    return arr
+  }
+
+  render () {
+    return (
+      <>
+       {this.PixelArray(10044)}
+      </>
+    )
+  }
 }
 
 export default App
