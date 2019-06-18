@@ -17,7 +17,7 @@ class Pixel extends React.Component {
   handleClick = evt => {
     this.setState({
       style: { 
-        backgroundColor: '#FFFFE0',
+        backgroundColor: '#F4F955',
         height: '120px',
         width: '120px' 
       }
@@ -44,9 +44,19 @@ class Pixel extends React.Component {
     })
   }
   
+  handleDoubleClick = () => {
+    this.setState({
+      style: { 
+        backgroundColor: '#ffffff',
+        height: '120px',
+        width: '120px' 
+      }
+    })
+  }
+
   render () {
     return (
-      <div onContextMenu={this.handleContextMenu} onClick = {this.handleClick} onMouseEnter = {this.handleMouseEnter} id = 'pixel' style = {this.state.style}></div>
+      <div onDoubleClick = {this.handleDoubleClick} onContextMenu={this.handleContextMenu} onClick = {this.handleClick} onMouseEnter = {this.handleMouseEnter} id = 'pixel' style = {this.state.style}></div>
     )
   }
 }
