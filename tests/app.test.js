@@ -7,6 +7,7 @@ import Pixel from '../client/components/Pixel'
 test('<App /> contains <Pixel />', () => {
   const expected = true
   const wrapper = mount(<App />)
+  // eslint-disable-next-line no-console
   console.log(wrapper.debug())
   const actual = wrapper.containsMatchingElement(<Pixel />)
 

@@ -54,7 +54,6 @@ class Pixel extends React.Component {
     })
   }
 
-  //not working
   handleDragEnter = () => {
     this.setState({
       style: { 

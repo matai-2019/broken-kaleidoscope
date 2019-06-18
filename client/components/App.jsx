@@ -14,7 +14,7 @@ class App extends React.Component {
   render () {
     return (
       <>
-        {this.pixelGrid(3)}
+        {this.pixelGrid(81)}
       </>
     )
   }
