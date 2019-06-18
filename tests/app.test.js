@@ -1,10 +1,14 @@
 import React from 'react'
-import {shallow} from 'enzyme'
+import { mount } from 'enzyme'
 
 import App from '../client/components/App'
+import Pixel from '../client/components/Pixel'
 
-test('<App />', () => {
-  const expected = 'React development has begun!'
-  const wrapper = shallow(<App />)
-  expect(wrapper.text()).toBe(expected)
+test('<App /> contains <Pixel />', () => {
+  const expected = true
+  const wrapper = mount(<App />)
+  console.log(wrapper.debug())
+  const actual = wrapper.containsMatchingElement(<Pixel />)
+
+  expect(actual).toBe(expected)
 })

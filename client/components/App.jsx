@@ -6,7 +6,7 @@ class App extends React.Component {
   pixelGrid (number) {
     let pixelArr = []
     for (let i = 0; i < number; i++) {
-      pixelArr.push(<Pixel/>)
+      pixelArr.push(<Pixel key = {i}/>)
     }
     return pixelArr
   }
@@ -14,7 +14,7 @@ class App extends React.Component {
   render () {
     return (
       <>
-        {this.pixelGrid(81)}
+        {this.pixelGrid(3)}
       </>
     )
   }
