@@ -13,7 +13,7 @@ class App extends React.Component {
   render () {
     return (
       <>
-        {this.pixelArray(100000)}
+        {this.pixelArray(10000)}
       </>
     )
   }
