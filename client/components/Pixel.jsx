@@ -16,7 +16,11 @@ class Pixel extends React.Component {
 
   handleClick = evt => {
     this.setState({
-      style: { backgroundColor: '#FFFFE0'}
+      style: { 
+        backgroundColor: '#FFFFE0',
+        height: '120px',
+        width: '120px' 
+      }
     })
   }
   
