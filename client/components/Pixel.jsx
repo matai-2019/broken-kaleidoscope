@@ -6,8 +6,8 @@ class Pixel extends React.Component {
     this.state = {
       style: {
         backgroundColor: this.randomHexColor(),
-        height: 66,
-        width: 66
+        height: 1,
+        width: 1
       }
     }
   }
@@ -20,20 +20,60 @@ randomHexColor = () =>
     this.setState({
       style: {
         backgroundColor: newColor,
-        height: 66,
-        width: 66
+        height: 1,
+        width: 1
       }
     })
   }
 
-  render () {
-    return (
-      <>
-      <div onMouseEnter={this.handleClick} style={this.state.style}>
-      </div>
-      </>
-    )
+  handleMouseEnter = evt => {
+    this.setState({
+      style: {
+        backgroundColor: 'green',
+        height: 1,
+        width: 1
+      }
+    })
   }
+
+  handleDragEnter = evt => {
+    this.setState({
+      style: {
+        backgroundColor: 'yellow',
+        height: 1,
+        width: 1
+      }
+    })
+  }
+
+   handleContextMenu = evt => {
+     evt.preventDefault()
+     this.setState({
+       style: {
+         backgroundColor: 'black',
+         height: 1,
+         width: 1
+       }
+     })
+   }
+
+   handleDoubleClick = evt => {
+     this.setState({
+       style: {
+         backgroundColor: 'white',
+         height: 1,
+         width: 1
+       }
+     })
+   }
+
+   render () {
+     return (
+      <>
+      <div onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onDragEnter={this.handleDragEnter} onContextMenu={this.handleContextMenu} onDoubleClick={this.handleDoubleClick} style={this.state.style}></div>
+      </>
+     )
+   }
 }
 
 export default Pixel
