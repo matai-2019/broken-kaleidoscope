@@ -13,6 +13,17 @@ class Pixel extends React.Component {
   randomHexColor = () =>
     `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
+  // handleChangeColour = () ={
+  //   const updColour = this.state.style.backgroundColor
+  //   this.setState({
+  //     backgroundColor : updColour
+  //   })
+  // }
+
+
+
+
+
   render () {
     return (
       <div id = 'pixel' style = {this.state.style}></div>
