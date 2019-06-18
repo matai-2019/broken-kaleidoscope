@@ -3,7 +3,11 @@ import React from 'react'
 class Pixel extends React.Component {
   render() {
     return (
-      <div></div>
+      <div style = {{
+        height: '10px',
+        width: '10px',
+        backgroundColor: 'blue'
+      }}></div>
     )
   }
 }
