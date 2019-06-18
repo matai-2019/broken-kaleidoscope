@@ -5,11 +5,23 @@ class Pixel extends React.Component {
     super(props)
     this.state = {
       style: {
-        height: '10px',
-        width: '10px',
+        height: '20px',
+        width: '20px',
         backgroundColor: this.randomHexColor()
       }
     }
+  }
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        style: {
+          backgroundColor: this.randomHexColor(),
+          width: 20,
+          height: 20
+        }
+      })
+    }, 10000)
   }
 
   randomHexColor = () =>
@@ -20,8 +32,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: newColor,
-        height: 1,
-        width: 1
+        height: 20,
+        width: 20
       }
     })
   }
@@ -29,9 +41,9 @@ class Pixel extends React.Component {
   handleMouseEnter = evt => {
     this.setState({
       style: {
-        backgroundColor: 'green',
-        height: 1,
-        width: 1
+        backgroundColor: 'gold',
+        height: 20,
+        width: 20
       }
     })
   }
@@ -40,8 +52,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'yellow',
-        height: 1,
-        width: 1
+        height: 20,
+        width: 20
       }
     })
   }
@@ -51,8 +63,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'black',
-        height: 1,
-        width: 1
+        height: 20,
+        width: 20
       }
     })
   }
@@ -61,13 +73,13 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'white',
-        height: 1,
-        width: 1
+        height: 20,
+        width: 20
       }
     })
   }
 
-  render () {
+  render() {
     return (
       <>
         <div style={this.state.style} onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onDragEnter={this.handleDragEnter} onContextMenu={this.handleContextMenu} onDoubleClick={this.handleDoubleClick}>
