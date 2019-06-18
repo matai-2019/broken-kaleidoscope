@@ -23,10 +23,20 @@ class Pixel extends React.Component {
       }
     })
   }
+
+  handleMouseEnter = evt => {
+    this.setState({
+      style: { 
+        backgroundColor: '#378B2E',
+        height: '120px',
+        width: '120px' 
+      }
+    })
+  }
   
   render () {
     return (
-      <div onClick = {this.handleClick} id = 'pixel' style = {this.state.style}></div>
+      <div onClick = {this.handleClick} onMouseEnter = {this.handleMouseEnter} id = 'pixel' style = {this.state.style}></div>
     )
   }
 }
