@@ -3,7 +3,60 @@ import Pixel from './Pixel'
 
 class App extends React.Component {
   render(){
-    return <Pixel />
+    return (
+      <React.Fragment>
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+        <Pixel />
+      </React.Fragment>
+    )
   }
 }
 

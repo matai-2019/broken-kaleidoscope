@@ -1,13 +1,19 @@
 import React from 'react'
 
 class Pixel extends React.Component {
-  render() {
-    return (
-      <div style = {{
+  constructor(){
+    super()
+    this.state = {
+      style: {
         height: '10px',
         width: '10px',
         backgroundColor: 'blue'
-      }}></div>
+      }
+    }
+  }
+  render() {
+    return (
+      <div style = {this.state.style}></div>
     )
   }
 }
