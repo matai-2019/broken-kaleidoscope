@@ -54,9 +54,20 @@ class Pixel extends React.Component {
     })
   }
 
+  //not working
+  handleDragEnter = () => {
+    this.setState({
+      style: { 
+        backgroundColor: '#CD468B',
+        height: '120px',
+        width: '120px' 
+      }
+    })
+  }
+
   render () {
     return (
-      <div onDoubleClick = {this.handleDoubleClick} onContextMenu={this.handleContextMenu} onClick = {this.handleClick} onMouseEnter = {this.handleMouseEnter} id = 'pixel' style = {this.state.style}></div>
+      <div onDragEnter={this.handleDragEnter} onDoubleClick = {this.handleDoubleClick} onContextMenu={this.handleContextMenu} onClick = {this.handleClick} onMouseEnter = {this.handleMouseEnter} id = 'pixel' style = {this.state.style}></div>
     )
   }
 }
