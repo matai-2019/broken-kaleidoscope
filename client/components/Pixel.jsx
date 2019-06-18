@@ -33,10 +33,20 @@ class Pixel extends React.Component {
       }
     })
   }
+
+  handleContextMenu = () => {
+    this.setState({
+      style: { 
+        backgroundColor: '#000000',
+        height: '120px',
+        width: '120px' 
+      }
+    })
+  }
   
   render () {
     return (
-      <div onClick = {this.handleClick} onMouseEnter = {this.handleMouseEnter} id = 'pixel' style = {this.state.style}></div>
+      <div onContextMenu={this.handleContextMenu} onClick = {this.handleClick} onMouseEnter = {this.handleMouseEnter} id = 'pixel' style = {this.state.style}></div>
     )
   }
 }
