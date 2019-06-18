@@ -35,15 +35,17 @@ class Pixel extends React.Component {
       }
       
     }
-    // handleReset = () => {
-    //   this.setState({
-    //     style:{
-    //       height: '100px',
-    //       width: '100px',
-    //       backgroundColor: this.randomHexColor()
-    //     }
-    //   })
-    // }
+    componentDidMount(){
+      setInterval(() => {
+        this.setState({
+          style:{
+            height: '100px',
+            width: '100px',
+            backgroundColor: this.randomHexColor()
+          }
+        })
+      }, 1000)
+    }
 
     render () {
     return (
