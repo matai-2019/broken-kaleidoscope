@@ -5,58 +5,21 @@ class App extends React.Component {
   render(){
     return (
       <React.Fragment>
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
-        <Pixel />
+        {this.pixelArray(this.calcGrid())}
       </React.Fragment>
     )
+  }
+
+  pixelArray = (num) => {
+    let arr = []
+    for (let i = 0; i < num; i++) {
+      arr.push(<Pixel key={i} />)
+    }
+    return arr
+  }
+
+  calcGrid = () => {
+    return(window.innerWidth/10 * window.innerHeight/10)
   }
 }
 
