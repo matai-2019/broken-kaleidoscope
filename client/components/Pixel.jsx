@@ -5,14 +5,15 @@ import React from 'react'
 class Pixel extends React.Component {
   constructor () {
     super()
-    const randomHexColor = () =>
-  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
     this.state = {
       height: 50,
       width: 50,
-      backgroundColor: randomHexColor()
+      backgroundColor: this.randomHexColor()
     }
   }
+  randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
   handleClick = (evt) => {
     this.setState({
@@ -38,11 +39,18 @@ class Pixel extends React.Component {
     })
   }
 
+  handleContextMenu = (evt) => {
+    evt.preventDefault()
+    this.setState({
+      backgroundColor: 'white'
+    })
+  }
+ 
 
 
   render () {
     return (
-      <div onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onDoubleClick={this.handleDoubleClick} onDragEnter={this.handleDragEnter} style={this.state}>
+      <div onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onDoubleClick={this.handleDoubleClick} onDragEnter={this.handleDragEnter} onContextMenu={this.handleContextMenu} style={this.state}>
       </div>
     )
   }
