@@ -4,7 +4,7 @@ import React from 'react'
 
 class Pixel extends React.Component {
   constructor () {
-    super()
+    super() 
 
     this.state = {
       height: 3,
