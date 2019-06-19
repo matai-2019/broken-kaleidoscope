@@ -26,12 +26,17 @@ class Pixel extends React.Component {
     })
   }
 
+  handleDoubleClick = (evt) => {
+    this.setState({
+      backgroundColor: 'green'
+    })
+  }
 
 
 
   render () {
     return (
-      <div onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} style={this.state}>
+      <div onClick={this.handleClick} onMouseEnter={this.handleMouseEnter} onDoubleClick={this.handleDoubleClick} style={this.state}>
       </div>
     )
   }
